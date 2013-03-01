@@ -13,29 +13,30 @@ $form->prepare();
     <div class="toggle_container">
         <div class="block" style="opacity: 1;">
             <div class="section">
-                <p><div class="columns clearfix">
-                    <div class="col_33">
-                        <?php
-                        echo $this->formRow($form->get('os'));
-                        echo $this->formRow($form->get('serie'));
-                        echo $this->formRow($form->get('nf'));
-                        ?>
+                <p><div class="columns clearfix form-posvenda">
+                    <div class="span12">
+                        <div class="span4">
+                            <?php
+                            echo $this->formRow($form->get('os'));
+                            echo $this->formRow($form->get('serie'));
+                            echo $this->formRow($form->get('nf'));
+                            ?>
+                        </div>
+                        <div class="span4">
+                            <?php
+                            echo $this->formRow($form->get('cpf'));
+                            echo $this->formRow($form->get('tipo_os'));
+                            echo $this->formRow($form->get('tipo_atendimento'));
+                            ?>
+                        </div>
+                        <div class="span4">
+                            <?php
+                            echo $this->formRow($form->get('status_os'));
+                            ?>
+                        </div>
                     </div>
-                    <div class="col_33">
+                    <div class="span12">
                         <?php
-                        echo $this->formRow($form->get('cpf'));
-                        echo $this->formRow($form->get('tipo_os'));
-                        echo $this->formRow($form->get('tipo_atendimento'));
-                        ?>
-                    </div>
-                    <div class="col_33">
-                        <?php
-                        echo $this->formRow($form->get('status_os'));
-                        
-                        ?>
-                    </div>
-                    <div class="col_100">
-                       <?php
                         echo $this->formRow($form->get('submit_1'));
                         ?>
                     </div>
@@ -55,7 +56,70 @@ $form->prepare();
     <div class="toggle_container">
         <div class="block" style="opacity: 1;">
             <div class="section">
-                <p</p>
+                <p>
+                <div class="columns clearfix form-posvenda">
+                    <div class="span12"> 
+
+                        <div class="span4">
+                            <?php
+                            echo $this->formRow($form->get('data_inicial'));
+                            ?>
+                        </div>
+                        <div class="span4">
+                            <?php
+                            echo $this->formRow($form->get('data_final'));
+                            ?>
+                        </div>
+                        <div class="span4">
+                            &nbsp;
+                        </div>
+                    </div>
+                    <div class="span12"> 
+                        <div class="span4">
+                            <?php
+                            echo $this->formRow($form->get('linha'));
+                            
+                            ?>
+                        </div>
+                        <div class="span4">
+                            <?php
+                            echo $this->formRow($form->get('familia'));
+                            
+                            ?>
+                        </div>
+                        <div class="span4">
+                            <?php
+                            echo $this->formRow($form->get('os_aberta'));
+                            echo $this->formRow($form->get('os_nao_atendida'));
+                            ?>
+                        </div>
+                    </div>
+                    <div class="span12"> 
+
+                        <div class="span4">
+                            <?php
+                                echo $this->formRow($form->get('posto'));
+                                echo $this->formRow($form->get('produto'));
+                                echo $this->formRow($form->get('nome_consumidor'));
+                            ?>
+                        </div>
+                        <div class="span4">
+                            <?php
+                                echo $this->formRow($form->get('nome_posto'));
+                                echo $this->formRow($form->get('descr_produto'));
+                            ?>
+                        </div>
+                        <div class="span4">
+                            &nbsp;
+                        </div>
+                    </div>
+                    <div class="span12">
+                            <?php
+                            echo $this->formRow($form->get('submit_1'));
+                            ?>
+                    </div>
+                </div>
+                </p>
             </div>
 
         </div>

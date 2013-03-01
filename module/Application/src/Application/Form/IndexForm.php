@@ -6,9 +6,11 @@ use Zend\Form\Form;
 
 class IndexForm extends Form {
 
+        
     public function __construct($name = null) {
 
         parent::__construct('index');
+        
         $this->setAttribute('method', 'post');
         $this->add(array(
             'name' => 'os',
@@ -86,11 +88,116 @@ class IndexForm extends Form {
             )
         ));
         $this->add(array(
+            'type' => 'select',
+            'name' => 'linha',
+            'options' => array(
+                'label' => 'Linha',
+                'value_options' => array(
+                    '0' => 'Climatizão',
+                    '1' => 'Eletrônico',
+                ),
+            )
+        ));
+        $this->add(array(
+            'type' => 'select',
+            'name' => 'familia',
+            'options' => array(
+                'label' => 'Familia',
+                'value_options' => array(
+                    '0' => 'Impressora',
+                    '1' => 'Máquina de costura',
+                ),
+            )
+        ));
+        $this->add(array(
+            'name' => 'data_inicial',
+            'attributes' => array(
+                'type'   => 'text',
+                'class'  => 'datepicker',
+            ),
+            'options' => array(
+                'label' => 'Data Inicial',
+            ),
+        ));
+        $this->add(array(
+            'name' => 'data_final',
+            'attributes' => array(
+                'type' => 'text',
+                'class'  => 'datepicker',
+            ),
+            'options' => array(
+                'label' => 'Data Final',
+            ),
+        ));
+        $this->add(array(
+            'name' => 'os_aberta',
+            'type' => 'checkbox',
+            'options' => array(
+                'label' => 'Apenas OS em aberto',
+            ),
+        ));
+        $this->add(array(
+            'name' => 'os_nao_atendida',
+            'type' => 'checkbox',
+            'options' => array(
+                'label' => 'Apenas OS não atendida',
+            ),
+        ));
+        $this->add(array(
+            'name' => 'posto',
+            'attributes' => array(
+                'type' => 'text',
+            ),
+            'options' => array(
+                'label' => 'Posto',
+            ),
+        ));
+        
+        $this->add(array(
+            'name' => 'nome_posto',
+            'attributes' => array(
+                'type' => 'text',
+            ),
+            'options' => array(
+                'label' => 'Nome Posto',
+            ),
+        ));
+        $this->add(array(
+            'name' => 'nome_consumidor',
+            'attributes' => array(
+                'type' => 'text',
+            ),
+            'options' => array(
+                'label' => 'Nome do Consumidor',
+            ),
+        ));
+        $this->add(array(
+            'name' => 'produto',
+            'attributes' => array(
+                'type' => 'text',
+            ),
+            'options' => array(
+                'label' => 'Produtos',
+            ),
+        ));
+        
+        $this->add(array(
+            'name' => 'descr_produto',
+            'attributes' => array(
+                'type' => 'text',
+            ),
+            'options' => array(
+                'label' => 'Descrição dos produtos',
+            ),
+        ));
+        
+        $this->add(array(
             'name' => 'submit_1',
             'attributes' => array(
                 'type' => 'submit',
                 'value' => 'Pesquisar',
                 'id' => 'submitbutton',
+                'class' => 'btn btn-primary'
             ),
         ));
     }
