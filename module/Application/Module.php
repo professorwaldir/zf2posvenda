@@ -20,6 +20,14 @@ class Module
         $eventManager        = $e->getApplication()->getEventManager();
         $moduleRouteListener = new ModuleRouteListener();
         $moduleRouteListener->attach($eventManager);
+        
+        $application = $e->getParam('application');
+        
+        $viewModel = $application->getMvcEvent()->getViewModel();
+                
+        $config = $e->getApplication()->getServiceManager()->get('config');
+                
+        $viewModel->cache_s3 = $config['cache_s3'];
     }
 
     public function getConfig()
