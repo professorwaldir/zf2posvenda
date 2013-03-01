@@ -1,3 +1,9 @@
+
+<?php
+$form = $this->form;
+$form->setAttribute('action', $this->url('home', array('action' => 'add')));
+$form->prepare();
+?>
 <div class="box grid_16" style="opacity: 1;">
     <h2 class="box_head">Parametros de pesquisa 1</h2>
     <div class="controls">
@@ -7,9 +13,35 @@
     <div class="toggle_container">
         <div class="block" style="opacity: 1;">
             <div class="section">
-                <p></p>
+                <p><div class="columns clearfix">
+                    <div class="col_33">
+                        <?php
+                        echo $this->formRow($form->get('os'));
+                        echo $this->formRow($form->get('serie'));
+                        echo $this->formRow($form->get('nf'));
+                        ?>
+                    </div>
+                    <div class="col_33">
+                        <?php
+                        echo $this->formRow($form->get('cpf'));
+                        echo $this->formRow($form->get('tipo_os'));
+                        echo $this->formRow($form->get('tipo_atendimento'));
+                        ?>
+                    </div>
+                    <div class="col_33">
+                        <?php
+                        echo $this->formRow($form->get('status_os'));
+                        
+                        ?>
+                    </div>
+                    <div class="col_100">
+                       <?php
+                        echo $this->formRow($form->get('submit_1'));
+                        ?>
+                    </div>
+                </div></p>
             </div>
-           
+
         </div>
     </div>
 </div>
@@ -25,7 +57,12 @@
             <div class="section">
                 <p</p>
             </div>
-            
+
         </div>
     </div>
 </div>
+
+
+
+
+
