@@ -3,6 +3,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <script src="http://vitalets.github.com/bootstrap-datepicker/jquery/jquery.js"></script>  
     <?php echo $this->headTitle($this->translate('Service Application'))->setSeparator(' - ')->setAutoEscape(false) ?>
 
     <?php echo $this->headMeta()->appendName('viewport', 'width=device-width, initial-scale=1.0') ?>
@@ -17,28 +18,32 @@
                     ->prependStylesheet($this->layout()->cache_s3['css'] . '/adminica/mobile.css')
                     ->prependStylesheet($this->layout()->cache_s3['css'] . '/adminica/grid.css')
                     ->prependStylesheet($this->layout()->cache_s3['css'] . '/themes/layout_fluid.css')
-                    ->prependStylesheet($this->layout()->cache_s3['css'] . '/themes/nav_switcher.php?default=switcher')            
+                    ->prependStylesheet($this->layout()->cache_s3['css'] . '/themes/nav_switcher.php?default=switcher')  
+                    ->prependStylesheet($this->layout()->cache_s3['css'] . '/adminica/form_fields.php')  
                     ->prependStylesheet($this->layout()->cache_s3['css'] . '/themes/skin_light.css')            
                     ->prependStylesheet($this->layout()->cache_s3['css'] . '/adminica/main.css')
                     ->prependStylesheet('http://fonts.googleapis.com/css?family=Open+Sans:400,700') ?>
 
     <!-- Scripts -->
+    
+    <script type="text/javascript" src="http://cache.kadabra.me/themes/adminica/scripts/jquery/jquery-min.js"></script>
+    <script type="text/javascript" src="http://cache.kadabra.me/themes/adminica/scripts/jquery/jqueryui-min.js"></script>
+    
     <?php echo $this->headScript()
+                    
                     ->prependFile($this->layout()->cache_s3['js'] . '/less/less.js')
                     ->prependFile($this->layout()->cache_s3['js'] . '/adminica/adminica_load.js')
                     ->prependFile($this->layout()->cache_s3['js'] . '/adminica/adminica_mobile.js')
                     ->prependFile($this->layout()->cache_s3['js'] . '/adminica/adminica_ui.js')
                     ->prependFile($this->layout()->cache_s3['bootstrap'] . '/js/bootstrap.js')
                     ->prependFile($this->layout()->cache_s3['js'] . '/adminica/prefixfree/prefixfree.js')
-                    ->prependFile($this->layout()->cache_s3['js'] . '/jquery/jqueryui-min.js')
-                    ->prependFile($this->layout()->cache_s3['js'] . '/jquery/jquery-min.js') ?>
+                     ?>
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-  
-  
+
   <style type="text/css">
 		/* Estilos que modificam o padrÃ£o do Bootstrap/tema */
 			@font-face {
@@ -54,6 +59,30 @@
 				top: -3px;
 				margin-right: 1ex;
 			}
+                        
+                        .checkbox_posvenda label span{
+                            
+                        }
+                        .checkbox_posvenda input{
+                            float: left;
+                        }
+                        
+                        .form_posvenda label span{
+                            display: block;
+                            width: 100%;
+                        }
+                        
+                        .form-posvenda .span4 input{
+                            border-radius: 3px;
+                            background-color: #F4F4F4;
+                            border-color: silver;
+                        }
+                        .span4{
+                            padding: 0;
+                            margin: 0;
+                        }
+                        
+                        
 			#topbar a.logo {
 				display: inline-block;
 				background: white url() !important;
