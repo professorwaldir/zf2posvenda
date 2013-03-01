@@ -3,6 +3,9 @@
 $form = $this->form;
 $form->setAttribute('action', $this->url('home', array('action' => 'add')));
 $form->prepare();
+echo"<pre>";
+
+print_r($form);exit;
 ?>
 <div class="box grid_16" style="opacity: 1;">
     <h2 class="box_head">Parametros de pesquisa 1</h2>
@@ -15,21 +18,21 @@ $form->prepare();
             <div class="section">
                 <p><div class="columns clearfix form-posvenda">
                     <div class="span12">
-                        <div class="span4">
+                        <div class="span4 form_posvenda">
                             <?php
                             echo $this->formRow($form->get('os'));
                             echo $this->formRow($form->get('serie'));
                             echo $this->formRow($form->get('nf'));
                             ?>
                         </div>
-                        <div class="span4">
+                        <div class="span4 form_posvenda">
                             <?php
                             echo $this->formRow($form->get('cpf'));
                             echo $this->formRow($form->get('tipo_os'));
                             echo $this->formRow($form->get('tipo_atendimento'));
                             ?>
                         </div>
-                        <div class="span4">
+                        <div class="span4 form_posvenda">
                             <?php
                             echo $this->formRow($form->get('status_os'));
                             ?>
@@ -60,34 +63,34 @@ $form->prepare();
                 <div class="columns clearfix form-posvenda">
                     <div class="span12"> 
 
-                        <div class="span4">
+                        <div class="span4 form_posvenda">
                             <?php
                             echo $this->formRow($form->get('data_inicial'));
                             ?>
                         </div>
-                        <div class="span4">
+                        <div class="span4 form_posvenda">
                             <?php
                             echo $this->formRow($form->get('data_final'));
                             ?>
                         </div>
-                        <div class="span4">
+                        <div class="span4 form_posvenda">
                             &nbsp;
                         </div>
                     </div>
                     <div class="span12"> 
-                        <div class="span4">
+                        <div class="span4 form_posvenda">
                             <?php
                             echo $this->formRow($form->get('linha'));
                             
                             ?>
                         </div>
-                        <div class="span4">
+                        <div class="span4 form_posvenda">
                             <?php
                             echo $this->formRow($form->get('familia'));
                             
                             ?>
                         </div>
-                        <div class="span4">
+                        <div class="span4 checkbox_posvenda">
                             <?php
                             echo $this->formRow($form->get('os_aberta'));
                             echo $this->formRow($form->get('os_nao_atendida'));
@@ -96,20 +99,20 @@ $form->prepare();
                     </div>
                     <div class="span12"> 
 
-                        <div class="span4">
+                        <div class="span4 form_posvenda">
                             <?php
                                 echo $this->formRow($form->get('posto'));
                                 echo $this->formRow($form->get('produto'));
                                 echo $this->formRow($form->get('nome_consumidor'));
                             ?>
                         </div>
-                        <div class="span4">
+                        <div class="span4 form_posvenda">
                             <?php
                                 echo $this->formRow($form->get('nome_posto'));
                                 echo $this->formRow($form->get('descr_produto'));
                             ?>
                         </div>
-                        <div class="span4">
+                        <div class="span4 form_posvenda">
                             &nbsp;
                         </div>
                     </div>
