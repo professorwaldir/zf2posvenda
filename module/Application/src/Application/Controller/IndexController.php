@@ -19,6 +19,8 @@ class IndexController extends AbstractActionController
     {
         $form = new IndexForm;
         
+        
+        
         return array('form'=>$form);
     }
 }
